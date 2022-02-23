@@ -24,9 +24,15 @@ const HomePage = () => {
               Join our discord community to engage with crypto's top talent.
             </div>
             <div className="w-full flex">
-              <button className="flex shrink-0   px-4 py-1  font-semibold border border-transparent hover:border-gray-200 text-[19px] md:text-[25px] text-white active:text-red-600 bg-[#385d94] hover:bg-transparent rounded-md">
-                Discord
-              </button>
+              <a
+                href={"https://discord.gg/hirecrypto"}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <button className="flex shrink-0   px-4 py-1  font-semibold border border-transparent hover:border-gray-200 text-[19px] md:text-[25px] text-white active:text-red-600 bg-[#385d94] hover:bg-transparent rounded-md">
+                  Discord
+                </button>
+              </a>
             </div>
           </div>
         </div>
@@ -254,9 +260,11 @@ const HomePage = () => {
                 className="px-[45px] md:px-[96px]"
               />
               <div className="flex justify-center">
-                <button className="flex shrink-0   px-4 py-1  font-semibold border border-transparent hover:border-gray-200 text-[15px] md:text-[20px] text-white active:text-red-600 bg-[#172036] hover:bg-transparent rounded-md mb-5">
-                  LinkedIn
-                </button>
+                <a href={"https://www.linkedin.com/in/jessenortman/"} target="_blank" rel="noreferrer">
+                  <button className="flex shrink-0   px-4 py-1  font-semibold border border-transparent hover:border-gray-200 text-[15px] md:text-[20px] text-white active:text-red-600 bg-[#172036] hover:bg-transparent rounded-md mb-5">
+                    LinkedIn
+                  </button>
+                </a>
               </div>
             </div>
           </div>
@@ -268,9 +276,11 @@ const HomePage = () => {
                 className="px-[45px] md:px-[96px]"
               />
               <div className="flex justify-center">
-                <button className="flex shrink-0   px-4 py-1  font-semibold border border-transparent hover:border-gray-200 text-[15px] md:text-[20px] text-white active:text-red-600 bg-[#172036] hover:bg-transparent rounded-md mb-5">
-                  LinkedIn
-                </button>
+                <a href={"https://www.linkedin.com/in/ryanbrutschin/"} target="_blank" rel="noreferrer">
+                  <button className="flex shrink-0   px-4 py-1  font-semibold border border-transparent hover:border-gray-200 text-[15px] md:text-[20px] text-white active:text-red-600 bg-[#172036] hover:bg-transparent rounded-md mb-5">
+                    LinkedIn
+                  </button>
+                </a>
               </div>
             </div>
           </div>
@@ -352,7 +362,7 @@ const HomePage = () => {
               placeholder="Message"
             />
           </div>
-          <button className="flex shrink-0  h-9  px-4 py-1  font-semibold border border-transparent hover:border-gray-200 text-white hover:text-red-600 active:text-white bg-[#385d94] hover:bg-transparent active:bg-green-600 rounded-md">
+          <button className="flex shrink-0  h-9  px-6 py-1  font-semibold border border-transparent hover:border-gray-200 text-white hover:text-red-600 active:text-white bg-[#385d94] hover:bg-transparent active:bg-green-600 rounded-md">
             Submit
           </button>
         </div>
@@ -364,15 +374,21 @@ const HomePage = () => {
           <img
             src={Joincommunityimg}
             alt=""
-            className="absolute top-0 left-0"
+            className="min-w-full min-h-full"
           ></img>
-          <div className="w-full relative text-center font-bold font-sans text-white text-[32px] mb-1">
+          <div className="w-full absolute top-0 sm:top-10 text-center font-bold font-sans text-white text-[32px] mb-1">
             Join The HireCrypto Community
           </div>
-          <div className="flex relative justify-center">
-            <button className="flex shrink-0 px-4 py-1 font-semibold border border-transparent hover:border-gray-200 text-[19px] md:text-[25px] text-white active:text-red-600 bg-[#385d94] hover:bg-transparent rounded-md">
-              Discord
-            </button>
+          <div className="flex   justify-center">
+            <a
+              href={"https://discord.gg/hirecrypto"}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <button className="flex absolute top-[110px] sm:top-[100px] shrink-0 px-4 py-1 font-semibold border border-transparent hover:border-gray-200 text-[19px] md:text-[25px] text-white active:text-red-600 bg-[#385d94] hover:bg-transparent rounded-md">
+                Discord
+              </button>
+            </a>
           </div>
         </div>
       </div>
