@@ -1,6 +1,8 @@
 import { Menu, Transition } from "@headlessui/react";
 import React, { Fragment } from "react";
 import { Spin as Hamburger } from "hamburger-react";
+import { Link} from 'react-scroll'
+
 
 export default function HumburgerMenu() {
 
@@ -11,7 +13,7 @@ export default function HumburgerMenu() {
           <>
             <div>
               <Menu.Button
-                className=""
+                className=" flex items-center"
               >
                 <Hamburger
                   size={30}
@@ -34,8 +36,8 @@ export default function HumburgerMenu() {
                 <div className="px-[1px] py-[1px] ">
                   <Menu.Item>
                     {({ active }) => (
-                      <a href="#Roadmap">
-                        <button
+                      <Link activeClass="active" to="Roadmap" spy={true} smooth={true} offset={0} duration={500} delay={300}>
+                      <button
                           className={`${
                             active
                               ? "bg-white text-red-600"
@@ -44,13 +46,13 @@ export default function HumburgerMenu() {
                         >
                           Roadmap
                         </button>
-                      </a>
+                      </Link>
                     )}
                   </Menu.Item>
                   <Menu.Item>
                     {({ active }) => (
-                      <a href="#About">
-                        <button
+                      <Link activeClass="active" to="About" spy={true} smooth={true} offset={0} duration={500} delay={300}>
+                      <button
                           className={`${
                             active
                             ? "bg-white text-red-600"
@@ -59,12 +61,12 @@ export default function HumburgerMenu() {
                         >
                           About
                         </button>
-                      </a>
+                      </Link>
                     )}
                   </Menu.Item>
                   <Menu.Item>
                     {({ active }) => (
-                      <a href="#MeetTheTeam">
+                        <Link activeClass="active" to="MeetTheTeam" spy={true} smooth={true} offset={0} duration={500} delay={300}>
                         <button
                           className={`${
                             active
@@ -74,13 +76,13 @@ export default function HumburgerMenu() {
                         >
                           Meet the Team
                         </button>
-                      </a>
+                      </Link>
                     )}
                   </Menu.Item>
                   <Menu.Item>
                     {({ active }) => (
-                      <a href="#ContactUs">
-                        <button
+                      <Link activeClass="active" to="ContactUs" spy={true} smooth={true} offset={0} duration={500} delay={300}>
+                      <button
                           className={`${
                             active
                             ? "bg-white text-red-600"
@@ -89,13 +91,13 @@ export default function HumburgerMenu() {
                         >
                           ContactUs
                         </button>
-                      </a>
+                      </Link>
                     )}
                   </Menu.Item>
                   <Menu.Item>
                     {({ active }) => (
-                      <a href="#Discord">
-                        <button
+                      <Link activeClass="active" to="Discord" spy={true} smooth={true} offset={-50} duration={500} delay={300}>
+                      <button
                           className={`${
                             active
                             ? "bg-white text-red-600"
@@ -104,20 +106,7 @@ export default function HumburgerMenu() {
                         >
                           Discord
                         </button>
-                      </a>
-                    )}
-                  </Menu.Item>
-                  <Menu.Item>
-                    {({ active }) => (
-                      <button
-                        className={`${
-                          active
-                          ? "bg-white text-red-600"
-                          : "bg-green-800 text-white "
-                        } flex items-center w-full px-2 py-2 text-sm`}
-                      >
-                        Connect wallet
-                      </button>
+                      </Link>
                     )}
                   </Menu.Item>
                 </div>

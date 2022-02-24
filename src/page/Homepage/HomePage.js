@@ -362,7 +362,7 @@ const HomePage = () => {
               placeholder="Message"
             />
           </div>
-          <button className="flex shrink-0  h-9  px-6 py-1  font-semibold border border-transparent hover:border-gray-200 text-white hover:text-red-600 active:text-white bg-[#385d94] hover:bg-transparent active:bg-green-600 rounded-md">
+          <button className="flex shrink-0  h-9  px-6 py-1  font-semibold border border-transparent hover:border-gray-200 text-white active:text-red-600 bg-[#385d94] hover:bg-transparent hover:text-green-600 rounded-md">
             Submit
           </button>
         </div>
@@ -384,8 +384,9 @@ const HomePage = () => {
               href={"https://discord.gg/hirecrypto"}
               target="_blank"
               rel="noreferrer"
+              className="flex justify-center"
             >
-              <button className="flex absolute top-[110px] sm:top-[100px] shrink-0 px-4 py-1 font-semibold border border-transparent hover:border-gray-200 text-[19px] md:text-[25px] text-white active:text-red-600 bg-[#385d94] hover:bg-transparent rounded-md">
+              <button className="flex justify-center absolute top-[110px] sm:top-[100px] shrink-0 px-4 py-1 font-semibold border border-transparent hover:border-gray-200 text-[19px] md:text-[25px] text-white active:text-red-600 bg-[#385d94] hover:bg-transparent rounded-md">
                 Discord
               </button>
             </a>
