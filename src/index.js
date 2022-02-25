@@ -3,18 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
-import { Provider } from 'react-redux';
-import { store } from './_helpers';
 import ReactNotification from "react-notifications-component";
 import "react-notifications-component/dist/theme.css";
 
 
 ReactDOM.render(
-  <Provider store={store}>
+  <div>
     <ReactNotification />
     <App />
-  </Provider>,
+  </div>,
   document.getElementById('root')
 );
 

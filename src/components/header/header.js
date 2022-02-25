@@ -12,7 +12,7 @@ const Header = () => {
           <div className="flex flex-row justify-between lg:justify-center w-full">
             <div className="flex items-center mr-auto">
               <a href='/' className="shrink-0 mr-12">
-                <img src={logo} alt="logo" className="w-[184px] h-[77px]"/>
+                <img src={logo} alt="logo"/>
               </a>
             </div>
             <div className="hidden lg:flex">

@@ -32,7 +32,7 @@ export default function HumburgerMenu() {
               leaveFrom="transform opacity-100 scale-100"
               leaveTo="transform opacity-0 scale-95"
             >
-              <Menu.Items className="absolute right-0 w-[calc(100vw-45px)] mt-2 origin-top-right shadow-lg ring-1 ring-black ring-opacity-5">
+              <Menu.Items className="absolute right-0 w-[calc(100vw-45px)] mt-[56px] origin-top-right shadow-lg ring-1 ring-black ring-opacity-5">
                 <div className="px-[1px] py-[1px] ">
                   <Menu.Item>
                     {({ active }) => (

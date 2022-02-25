@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import {connectWallet} from "../../utils/interacts";
 
 const Minter = (props) => {
@@ -26,7 +26,7 @@ const Minter = (props) => {
 
   return (
     <div className="Minter">
-      <button id="walletButton" onClick={connectWalletPressed} className="flex shrink-0  h-9  px-4 py-1  font-semibold sm:border sm:border-transparent sm:hover:border-gray-200 text-white active:text-red-600 hover:text-green-600 bg-[rgb(23,32,54)] sm:bg-[#385d94] hover:bg-transparent rounded-md">
+      <button id="walletButton" onClick={connectWalletPressed} className="flex shrink-0  h-9  px-4 py-1  font-semibold sm:border sm:border-transparent sm:hover:border-gray-200 text-white active:text-red-600 hover:text-green-600 bg-none sm:bg-[#385d94] hover:bg-transparent rounded-md">
         {walletAddress.length > 0 ? (
           "Connected: " +
           String(walletAddress).substring(0, 6) +

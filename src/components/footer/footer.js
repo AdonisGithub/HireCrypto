@@ -30,7 +30,7 @@ const Footer = () => {
         <div className="hidden md:flex items-center">
           <div >
             <div className="flex justify-center ">
-              <img src={logo} alt="" className="w-[192px] h-[80px]"/>
+              <img src={logo} alt="" />
             </div>
             <div className="flex text-center text-white text-[16px]">
               Copyright © 2022 HireCrypto. All rights reserved.
