@@ -1,6 +1,48 @@
-import React from "react";
+import React, {useState} from "react";
+import validator from 'validator';
+import axios from "axios";
+import {useSelector } from "react-redux";
+
+import { ErrorAlert, SuccessAlert } from "../components/common/ToastAlert";
+const API_URL = "http://localhost:8080";
 
 const ContactUs = () => {
+
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [message, setMessage] = useState("");
+
+  const walletaddress = useSelector((state) => state.walletaddress.walletaddress); //store data
+  console.log("ContactUs:", walletaddress);
+
+  const submit = (e) => {
+    e.preventDefault();
+
+    if(validator.isEmail(email)&&firstName && lastName && phoneNumber && message){
+      const data = {
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        phoneNumber: phoneNumber,
+        message: message,
+        walletaddress: walletaddress
+        
+      };
+      axios.post(API_URL + "/report",data )
+      .then(res => { 
+        console.log(res.data);
+        SuccessAlert(res.data);
+      })
+      .catch(err =>{ 
+        console.log(err.response.data); 
+      });
+    }
+    else 
+      ErrorAlert("Something is wrong!");
+  };
+
   return (
     <div>
       <div className="w-full bg-[#182037] pb-11" id="ContactUs">
@@ -20,6 +62,8 @@ const ContactUs = () => {
                 type="text"
                 name="firstname"
                 placeholder="First Name*"
+                value={firstName}
+                onChange={(e)=>setFirstName(e.target.value)}
               />
             </div>
             <div className=" mt-4">
@@ -30,6 +74,8 @@ const ContactUs = () => {
                 type="text"
                 name="lastname"
                 placeholder="Last Name*"
+                value={lastName}
+                onChange={(e)=>setLastName(e.target.value)}
               />
             </div>
           </div>
@@ -42,6 +88,8 @@ const ContactUs = () => {
                 type="email"
                 name="email"
                 placeholder="Email*"
+                value={email}
+                onChange={(e)=>setEmail(e.target.value)}
               />
             </div>
             <div className=" mt-4">
@@ -50,8 +98,10 @@ const ContactUs = () => {
                 className="py-3 px-2 mb-2 text-white lg:text-black border  lg:border-black rounded-lg lg:rounded-none bg-transparent lg:bg-white hover:border-blue-700"
                 style={{ width: "-webkit-fill-available" }}
                 type="text"
-                name="phonenumber"
+                name="phoneNumber"
                 placeholder="Phone Number*"
+                value={phoneNumber}
+                onChange={(e)=>setPhoneNumber(e.target.value)}
               />
             </div>
           </div>
@@ -65,9 +115,13 @@ const ContactUs = () => {
               rows={6}
               cols={40}
               placeholder="Message"
+              value={message}
+              onChange={(e)=>setMessage(e.target.value)}
             />
           </div>
-          <button className="flex shrink-0  h-9  px-6 py-1  font-semibold border border-transparent hover:border-gray-200 text-white active:text-red-600 bg-[#385d94] hover:bg-transparent hover:text-green-600 rounded-md">
+          <button className="flex shrink-0  h-9  px-6 py-1  font-semibold border border-transparent hover:border-gray-200 text-white active:text-red-600 bg-[#385d94] hover:bg-transparent hover:text-green-600 rounded-md"
+            onClick={submit}
+          >
             Submit
           </button>
         </div>

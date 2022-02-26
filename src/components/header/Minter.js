@@ -1,5 +1,9 @@
 import { useState } from "react";
 import {connectWallet} from "../../utils/interacts";
+import { StoreWalletAddress } from "../../_actions";
+import { useDispatch} from "react-redux";
+
+
 
 const Minter = (props) => {
 
@@ -14,12 +18,16 @@ const Minter = (props) => {
     
   // }, []);
 
+  const dispatch = useDispatch();
+
   const connectWalletPressed = async () => { //TODO: implement
       const walletResponse = await connectWallet();
       //setStatus(walletResponse.status);
       setWallet(walletResponse.address);
-  };
 
+		  dispatch(StoreWalletAddress(walletResponse.address));
+      
+  };
   // const onMintPressed = async () => { //TODO: implement
     
   // };

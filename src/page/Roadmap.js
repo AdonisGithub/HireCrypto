@@ -1,139 +1,190 @@
-import React from "react";
-import Roadmapimg1 from "../assets/images/Roadmap1.png";
-import Roadmapimg2 from "../assets/images/Roadmap2.png";
-const Roadmap = () => {
+
+import React, { useEffect, useState, useRef } from "react";
+import Roadmapimg_laptop from "../assets/images/Roadmap_laptop.png";
+const Roadmap = ({ scroll }) => {
+
+  const [phase1Style, setPhase1Style] = useState({});
+  const [phase2Style, setPhase2Style] = useState({});
+  const [phase3Style, setPhase3Style] = useState({});
+  const [phase4Style, setPhase4Style] = useState({});
+  
+  const phase1Ref = useRef(null);
+  const phase2Ref = useRef(null);
+  const phase3Ref = useRef(null);
+  const phase4Ref = useRef(null);
+
+
+  useEffect(() => {
+    if (phase1Ref.current) {
+      let domHeight = phase1Ref.current.getBoundingClientRect().y;
+      if( domHeight < 420 && domHeight > 310 ) {
+          setPhase1Style({
+          opacity: 0.2
+        });
+      } else if ( domHeight < 310 && domHeight > 200 ) {
+          setPhase1Style({
+          opacity: 0.7,
+        });
+      } else if ( domHeight < 150) {
+          setPhase1Style({
+          opacity: 1,
+        });
+      } else if ( domHeight >450 ) {
+          setPhase1Style({
+          opacity: 0,
+        });
+      }
+    }
+
+    if (phase2Ref.current) {
+      let domHeight = phase2Ref.current.getBoundingClientRect().y;
+      if( domHeight < 420 && domHeight > 310 ) {
+          setPhase2Style({
+          opacity: 0.2
+        });
+      } else if ( domHeight < 310 && domHeight > 200 ) {
+          setPhase2Style({
+          opacity: 0.7,
+        });
+      } else if ( domHeight < 150) {
+          setPhase2Style({
+          opacity: 1,
+        });
+      } else if ( domHeight >450 ) {
+          setPhase2Style({
+          opacity: 0,
+        });
+      }
+    }
+
+    if (phase3Ref.current) {
+      let domHeight = phase3Ref.current.getBoundingClientRect().y;
+      if( domHeight < 420 && domHeight > 310 ) {
+          setPhase3Style({
+          opacity: 0.2
+        });
+      } else if ( domHeight < 310 && domHeight > 200 ) {
+          setPhase3Style({
+          opacity: 0.7,
+        });
+      } else if ( domHeight < 150) {
+          setPhase3Style({
+          opacity: 1,
+        });
+      } else if ( domHeight >450 ) {
+          setPhase3Style({
+          opacity: 0,
+        });
+      }
+    }
+    if (phase4Ref.current) {
+      let domHeight = phase4Ref.current.getBoundingClientRect().y;
+      if( domHeight < 420 && domHeight > 310 ) {
+          setPhase4Style({
+          opacity: 0.2
+        });
+      } else if ( domHeight < 310 && domHeight > 200 ) {
+          setPhase4Style({
+          opacity: 0.9,
+        });
+      } else if ( domHeight < 150) {
+          setPhase4Style({
+          opacity: 1,
+        });
+      } else if ( domHeight >450 ) {
+          setPhase4Style({
+          opacity: 0,
+        });
+      }
+    }
+  }, [scroll]);
+
   return (
     <div>
-      <div className="w-full bg-[#182037]" id="Roadmap">
-        <div className="w-full text-center font-bold font-sans text-white text-[38px] 2xl:text-[45px] pt-[85px] pb-2">
+      <div className="w-full relative bg-[#182037]" id="Roadmap">
+        <div className="w-full text-center font-bold font-sans text-white text-[38px] 2xl:text-[45px] pt-[85px] pb-2" >
           Roadmap
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 w-full ">
-          <div className=" border-l-2 border-white pl-3 ml-[35px] mb-3">
-            <div className="font-bold font-sans text-white text-[28px] mt-3 mb-2">
-              Q1 2022
-            </div>
-            <div className="font-sans text-white text-[16px]">
-              -Discord Launch ✅
-            </div>
-            <div className="font-sans text-white text-[16px]">
-              -Website Launch ❌
-            </div>
-            <div className="font-sans text-white text-[16px]">
-              -500 Discord Members ❌
-            </div>
-            <div className="font-sans text-white text-[16px]">
-              -First employer hiring event ❌
-            </div>
-          </div>
-          <div className=" border-l-2 border-white pl-3 ml-[35px] mb-3">
-            <div className="font-bold font-sans text-white text-[28px] mt-3 mb-2">
-              Q2 2022
-            </div>
-            <div className="font-sans text-white text-[16px]">
-              -1k Discord Members
-            </div>
-            <div className="font-sans text-white text-[16px]">
-              -Host 1 employer hiring event per week
-            </div>
-            <div className="font-sans text-white text-[16px]">
-              -Connect your wallet to HireCrypto.com to be eligible for a FREE
-              NFT airdrop
-            </div>
-          </div>
-          <div className=" border-l-2 border-white pl-3 ml-[35px] mb-3">
-            <div className="font-bold font-sans text-white text-[28px] mt-3 mb-2">
-              Q3 2022
-            </div>
-            <div className="font-sans text-white text-[16px]">
-              -5k Discord Members
-            </div>
-            <div className="font-sans text-white text-[16px]">
-              -Multiple crypto job opportunities every week
-            </div>
-            <div className="font-sans text-white text-[16px]">
-              -Reach 100+ weekly interviews in discord
-            </div>
-            <div className="font-sans text-white text-[16px]">
-              -Develop feature to be able to update and change NFT metadata
-            </div>
-          </div>
-          <div className="  border-l-2 border-white pl-3 ml-[35px] mb-3">
-            <div className="font-bold font-sans text-white text-[28px] mt-3 mb-2">
-              Q4 2022
-            </div>
-            <div className="font-sans text-white text-[16px]">
-              -10k discord members
-            </div>
-            <div className="font-sans text-white text-[16px]">
-              -Daily crypto job opportunities
-            </div>
-            <div className="font-sans text-white text-[16px]">
-              -Airdrop NFT to everyone who connected their wallet
-            </div>
-            <div className="font-sans text-white text-[16px]">
-              -Launch job board section on website with nft utility
-            </div>
-          </div>
+        <div className="hidden md:flex w-full min-h-full justify-center absolute top-[150px] ">
+          <img src={Roadmapimg_laptop} alt=""/>
         </div>
-        <div className="flex w-full justify-center">
-          <img src={Roadmapimg1} alt="roadmapimage1" className="w-full" />
+        <div className="w-full flex justify-center md:justify-start" ref={phase1Ref} style={phase1Style}>
+            <div className="md:w-1/2 flex mb-5 mt-8 ">
+              <div className="font-bold font-sans text-white  text-[28px]  md:ml-[15%] xl:ml-[20%] pr-3">
+                PHASE 1
+              </div>
+              <div className="w-[210px] sm:w-[310px] border-l-2 border-white pl-3  mb-3 mr-3">
+                <div className="font-sans text-white text-[16px]">
+                  -Discord Launch 
+                </div>
+                <div className="font-sans text-white text-[16px]">
+                  -Website Launch 
+                </div>
+                <div className="font-sans text-white text-[16px]">
+                  -First employer hiring event
+                </div>
+              </div>
+            </div>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 w-full ">
-          <div className="border-l-2 border-white pl-3 ml-[35px] mb-3">
-            <div className="font-bold font-sans text-white text-[28px] mt-3 mb-2">
-              Q1 2023
+        <div className="w-full flex justify-center md:justify-end " ref={phase2Ref} style={phase2Style}>
+            <div className="md:w-1/2 flex mb-5 mt-[85px] ">
+              <div className="font-bold font-sans text-white text-[28px] md:ml-[15%] xl:ml-[20%] pr-3">
+                PHASE 2
+              </div>
+              <div className="w-[210px] sm:w-[310px] border-l-2 border-white pl-3  mb-3 mr-3">
+                <div className="font-sans text-white text-[16px]">
+                  -Multiple crypto Hiring Events every week
+                </div>
+                <div className="font-sans text-white text-[16px]">
+                  -Reach 100+ weekly interviews in discord
+                </div>
+                <div className="font-sans text-white text-[16px]">
+                 -Develop limited NFT collection 
+                </div>
+              </div>
             </div>
-            <div className="font-sans text-white text-[16px]">
-              -Grow to 50k discord members
-            </div>
-            <div className="font-sans text-white text-[16px]">
-              -Provide hiring opportunity utility for NFT holders
-            </div>
-            <div className="font-sans text-white text-[16px]">
-              -Develop Crypto Token
-            </div>
-          </div>
-          <div className=" border-l-2 border-white pl-3 ml-[35px] mb-3">
-            <div className="font-bold font-sans text-white text-[28px] mt-3 mb-2">
-              Q2 2023
-            </div>
-            <div className="font-sans text-white text-[16px]">
-              -Develop widget code to integrate NFT with future partner websites
-              to expand NFT utility
-            </div>
-            <div className="font-sans text-white text-[16px]">
-              -Become the #1 community for hiring talent in crypto
-            </div>
-          </div>
-          <div className=" border-l-2 border-white pl-3 ml-[35px] mb-3">
-            <div className="font-bold font-sans text-white text-[28px] mt-3 mb-2">
-              Q3 2023
-            </div>
-            <div className="font-sans text-white text-[16px]">
-              -Reach 100k discord members
-            </div>
-            <div className="font-sans text-white text-[16px]">
-              -Reach 1000+ daily interviews in our discord server
-            </div>
-            <div className="font-sans text-white text-[16px]">
-              -Launch Crypto Token
-            </div>
-          </div>
-          <div className=" border-l-2 border-white pl-3 ml-[35px] mb-3">
-            <div className="font-bold font-sans text-white text-[28px] mt-3 mb-2">
-              Q4 2023
-            </div>
-            <div className="font-sans fobnt-bold text-white text-[16px]">
-              SECRET ROADMAP
-            </div>
-            <div className="font-sans text-white text-[16px]">
-              This is when things get interesting.
-            </div>
-          </div>
         </div>
-        <div className="flex w-full justify-center">
-          <img src={Roadmapimg2} alt="roadmapimage2" className="w-full" />
+        <div className="w-full flex justify-center md:justify-start " ref={phase3Ref} style={phase3Style}>
+            <div className=" md:w-1/2 flex mb-5 mt-[85px] ">
+              <div className="font-bold font-sans text-white text-[28px]  md:ml-[15%] xl:ml-[20%] pr-3">
+                PHASE 3
+              </div>
+              <div className="w-[210px] sm:w-[310px] border-l-2 border-white pl-3  mb-3 mr-3">
+                <div className="font-sans text-white text-[16px]">
+                -Launch limited NFT collection -IRL Events
+                </div>
+                <div className="font-sans text-white text-[16px]">
+                  -Launch HireCrypto job board on the blockchain
+                </div>
+                <div className="font-sans text-white text-[16px]">
+                Connect your wallet to HireCrypto.com to be eligible for a FREE NFT airdrop 
+                </div>
+              </div>
+            </div>
+        </div>
+        <div className="w-full flex justify-center md:justify-end " ref={phase4Ref} style={phase4Style}>
+            <div className="md:w-1/2 flex mb-5 mt-8 ">
+              <div className="font-bold font-sans text-white text-[28px] md:ml-[15%] xl:ml-[20%] pr-3">
+                PHASE 4
+              </div>
+              <div className="w-[210px] sm:w-[310px] border-l-2 border-white pl-3  mb-3 mr-3">
+                <div className="font-sans text-white text-[16px]">
+                -Become the #1 community for hiring talent in crypto
+                </div>
+                <div className="font-sans text-white text-[16px]">
+                -Reach 100k discord members
+                </div>
+                <div className="font-sans text-white text-[16px]">
+                -Launch Crypto Token 
+                </div>
+                <div className="font-sans text-white text-[16px]">
+                -NFT Staking
+                </div>
+                <div className="font-sans text-white text-[16px]">
+                -Airdrop FREE NFT with evolving metadata 
+                </div>
+              </div>
+            </div>
         </div>
       </div>
     </div>
