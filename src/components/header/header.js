@@ -31,15 +31,15 @@ const Header = () => {
               >
                 Meet the Team
               </Link>
-              <Link activeClass="active" to="ContactUs" spy={true} smooth={true} offset={0} duration={500} delay={300}
-                className="flex shrink-0 items-center pr-4 py-2 font-semibold text-white active:text-red-600 hover:text-green-600 mx-1 cursor-pointer"
-              >
-                ContactUs
-              </Link>
               <Link activeClass="active" to="Discord" spy={true} smooth={true} offset={-50} duration={500} delay={300}
                 className="flex shrink-0 items-center pr-4 py-2 font-semibold text-white active:text-red-600 hover:text-green-600 mx-1 cursor-pointer"
               >
                 Discord
+              </Link>
+              <Link activeClass="active" to="ContactUs" spy={true} smooth={true} offset={0} duration={500} delay={300}
+                className="flex shrink-0 items-center pr-4 py-2 font-semibold text-white active:text-red-600 hover:text-green-600 mx-1 cursor-pointer"
+              >
+                ContactUs
               </Link>
             </div>
             <div className="hidden sm:flex items-center mx-1">

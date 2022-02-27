@@ -25,8 +25,8 @@ const HomePage = () => {
       <Roadmap scroll={scroll}/>
       <AboutUs />
       <MeetTheTeam />
-      <ContactUs />
       <Discord />
+      <ContactUs />
       <Footer />
     </div>
   );
