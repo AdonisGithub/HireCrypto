@@ -9,7 +9,7 @@ const Wellcome = () => {
             <div className=" text-white ">
                 <div className="flex w-full justify-center">
                     <div className="w-[350px] sm:w-[596px] md:w-[663px] lg:w-[893px] 2xl:w-[70vw] text-center text-[19px] sm:text-[34px] md:text-[38px] lg:text-[51px] 2xl:text-[4vw] leading-tight font-bold font-sans tracking-wide mb-7">
-                    A Web3.0 company re-imaging the traditional recruitment process.
+                        HireCrypto is a Web 3.0 company re-imagining the traditional recruitment process
                     </div>
                 </div>
                 <div className="flex w-full justify-center">
