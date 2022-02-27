@@ -4,7 +4,7 @@ const Report = db.report;
 
 exports.report = (req, res) => {
       const newreport = new Report({
-          firstName: req.body.fullName,
+          firstName: req.body.firstName,
           lastName: req.body.lastName,
           email: req.body.email,
           phoneNumber:req.body.phoneNumber,
