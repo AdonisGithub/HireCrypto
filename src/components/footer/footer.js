@@ -1,5 +1,6 @@
 import React  from "react";
 import logo from "../../assets/images/logo.png";
+import { Link} from 'react-scroll'
 const Footer = () => {
   return (
     <div className="bg-[#182037] px-[45px] md:px-[96px]">
@@ -9,19 +10,19 @@ const Footer = () => {
             Contact
           </div>
           <a
-            href="/"
+            href="tel:15164561573"
             className="flex shrink-0 items-center  text-gray-400 hover:text-green-600 mb-2 "
           >
             Phone
           </a>
           <a
-            href="/"
+            href="mailto:ryan@hirecrypto.com"
             className="flex shrink-0 items-center  text-gray-400 hover:text-green-600 mb-2"
           >
             Email
           </a>
           <a
-            href="/"
+            href="/ContactUs"
             className="flex shrink-0 items-center  text-gray-400 hover:text-green-600 mb-1 md:mb-2"
           >
             Contact Form
@@ -41,21 +42,22 @@ const Footer = () => {
           <div className="text-base text-white font-bold font-sans mb-5">
             Socials
           </div>
-          <a
-            href="/"
-            className="flex shrink-0 items-center  text-gray-400 hover:text-green-600 mb-2 "
+          <Link activeClass="active" to="Discord" spy={true} smooth={true} offset={0} duration={500} delay={300}
+            className="flex shrink-0 items-center cursor-pointer  text-gray-400 hover:text-green-600 mb-2 "
           >
             Discord
-          </a>
+          </Link>
           <a
-            href="/"
+            href="https://twitter.com/Hire_Crypto"
             className="flex shrink-0 items-center  text-gray-400 hover:text-green-600 mb-2"
+            target="_blank" rel="noreferrer"
           >
             Twitter
           </a>
           <a
-            href="/"
+            href=" https://www.instagram.com/hirecrypto"
             className="flex shrink-0 items-center  text-gray-400 hover:text-green-600 mb-1 md:mb-2"
+            target="_blank" rel="noreferrer"
           >
             Instagram
           </a>
