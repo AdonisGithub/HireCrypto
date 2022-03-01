@@ -110,10 +110,10 @@ const Roadmap = ({ scroll }) => {
         </div>
         <div className="w-full flex justify-center md:justify-start" ref={phase1Ref} style={phase1Style}>
             <div className="md:w-1/2 flex mb-5 mt-8 ">
-              <div className="font-bold font-sans text-white  text-[28px]  md:ml-[15%] xl:ml-[20%] pr-3">
+              <div className="font-bold font-sans text-white  text-[28px]  md:ml-[15%] xl:ml-[20%] pr-3 whitespace-nowrap">
                 PHASE 1
               </div>
-              <div className="w-[210px] sm:w-[310px] border-l-2 border-white pl-3  mb-3 mr-3">
+              <div className="w-[210px] sm:w-[310px] border-l-2 border-white pl-3  mb-3 mr-[55px]">
                 <div className="font-sans text-white text-[16px]">
                   -Discord Launch 
                 </div>
@@ -128,10 +128,10 @@ const Roadmap = ({ scroll }) => {
         </div>
         <div className="w-full flex justify-center md:justify-end " ref={phase2Ref} style={phase2Style}>
             <div className="md:w-1/2 flex mb-5 mt-[85px] ">
-              <div className="font-bold font-sans text-white text-[28px] md:ml-[15%] xl:ml-[20%] pr-3">
+              <div className="font-bold font-sans text-white text-[28px] md:ml-[15%] xl:ml-[20%] pr-3 whitespace-nowrap">
                 PHASE 2
               </div>
-              <div className="w-[210px] sm:w-[310px] border-l-2 border-white pl-3  mb-3 mr-3">
+              <div className="w-[210px] sm:w-[310px] border-l-2 border-white pl-3  mb-3 mr-[55px]">
                 <div className="font-sans text-white text-[16px]">
                   -Multiple crypto Hiring Events every week
                 </div>
@@ -146,28 +146,31 @@ const Roadmap = ({ scroll }) => {
         </div>
         <div className="w-full flex justify-center md:justify-start " ref={phase3Ref} style={phase3Style}>
             <div className=" md:w-1/2 flex mb-5 mt-[85px] ">
-              <div className="font-bold font-sans text-white text-[28px]  md:ml-[15%] xl:ml-[20%] pr-3">
+              <div className="font-bold font-sans text-white text-[28px]  md:ml-[15%] xl:ml-[20%] pr-3 whitespace-nowrap">
                 PHASE 3
               </div>
-              <div className="w-[210px] sm:w-[310px] border-l-2 border-white pl-3  mb-3 mr-3">
+              <div className="w-[210px] sm:w-[310px] border-l-2 border-white pl-3  mb-3 mr-[55px]">
                 <div className="font-sans text-white text-[16px]">
-                -Launch limited NFT collection -IRL Events
+                -Launch limited NFT collection
+                </div>
+                <div className="font-sans text-white text-[16px]">
+                -IRL Events
                 </div>
                 <div className="font-sans text-white text-[16px]">
                   -Launch HireCrypto job board on the blockchain
                 </div>
                 <div className="font-sans text-white text-[16px]">
-                Connect your wallet to HireCrypto.com to be eligible for a FREE NFT airdrop 
+                  -Connect your wallet to HireCrypto.com to be eligible for a FREE NFT airdrop 
                 </div>
               </div>
             </div>
         </div>
         <div className="w-full flex justify-center md:justify-end " ref={phase4Ref} style={phase4Style}>
             <div className="md:w-1/2 flex mb-5 mt-8 ">
-              <div className="font-bold font-sans text-white text-[28px] md:ml-[15%] xl:ml-[20%] pr-3">
+              <div className="font-bold font-sans text-white text-[28px] md:ml-[15%] xl:ml-[20%] pr-3 whitespace-nowrap">
                 PHASE 4
               </div>
-              <div className="w-[210px] sm:w-[310px] border-l-2 border-white pl-3  mb-3 mr-3">
+              <div className="w-[210px] sm:w-[310px] border-l-2 border-white pl-3  mb-3 mr-[55px]">
                 <div className="font-sans text-white text-[16px]">
                 -Become the #1 community for hiring talent in crypto
                 </div>

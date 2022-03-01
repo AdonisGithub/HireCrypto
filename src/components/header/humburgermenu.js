@@ -32,7 +32,7 @@ export default function HumburgerMenu() {
               leaveFrom="transform opacity-100 scale-100"
               leaveTo="transform opacity-0 scale-95"
             >
-              <Menu.Items className="absolute right-0 w-[calc(100vw-45px)] mt-[56px] origin-top-right shadow-lg ring-1 ring-black ring-opacity-5">
+              <Menu.Items className="fixed right-0 w-full mt-[56px] sm:mt-[13px] origin-top-right shadow-lg ring-1 ring-black ring-opacity-5">
                 <div className="px-[1px] py-[1px] ">
                   <Menu.Item>
                     {({ active }) => (
@@ -40,8 +40,8 @@ export default function HumburgerMenu() {
                       <button
                           className={`${
                             active
-                              ? "bg-white text-red-600"
-                              : "bg-green-800 text-white "
+                              ? "bg-[rgb(23,32,54)] bg-opacity-60 text-green-600"
+                              : "bg-[rgb(23,32,54)] bg-opacity-60 text-white "
                           } flex items-center w-full px-2 py-2 text-sm`}
                         >
                           Roadmap
@@ -55,11 +55,11 @@ export default function HumburgerMenu() {
                       <button
                           className={`${
                             active
-                            ? "bg-white text-red-600"
-                            : "bg-green-800 text-white "
+                            ? "bg-[rgb(23,32,54)] bg-opacity-60 text-green-600"
+                            : "bg-[rgb(23,32,54)] bg-opacity-60 text-white "
                           } flex items-center w-full px-2 py-2 text-sm`}
                         >
-                          About
+                          About Us
                         </button>
                       </Link>
                     )}
@@ -70,26 +70,11 @@ export default function HumburgerMenu() {
                         <button
                           className={`${
                             active
-                            ? "bg-white text-red-600"
-                            : "bg-green-800 text-white "
+                            ? "bg-[rgb(23,32,54)] bg-opacity-60 text-green-600"
+                            : "bg-[rgb(23,32,54)] bg-opacity-60 text-white "
                           } flex items-center w-full px-2 py-2 text-sm`}
                         >
                           Meet the Team
-                        </button>
-                      </Link>
-                    )}
-                  </Menu.Item>
-                  <Menu.Item>
-                    {({ active }) => (
-                      <Link activeClass="active" to="ContactUs" spy={true} smooth={true} offset={0} duration={500} delay={300}>
-                      <button
-                          className={`${
-                            active
-                            ? "bg-white text-red-600"
-                            : "bg-green-800 text-white "
-                          } flex items-center w-full px-2 py-2 text-sm`}
-                        >
-                          ContactUs
                         </button>
                       </Link>
                     )}
@@ -100,11 +85,26 @@ export default function HumburgerMenu() {
                       <button
                           className={`${
                             active
-                            ? "bg-white text-red-600"
-                            : "bg-green-800 text-white "
+                            ? "bg-[rgb(23,32,54)] bg-opacity-60 text-green-600"
+                            : "bg-[rgb(23,32,54)] bg-opacity-60 text-white "
                           } flex items-center w-full px-2 py-2 text-sm`}
                         >
                           Discord
+                        </button>
+                      </Link>
+                    )}
+                  </Menu.Item>
+                  <Menu.Item>
+                    {({ active }) => (
+                      <Link activeClass="active" to="ContactUs" spy={true} smooth={true} offset={0} duration={500} delay={300}>
+                      <button
+                          className={`${
+                            active
+                            ? "bg-[rgb(23,32,54)] bg-opacity-60 text-green-600"
+                            : "bg-[rgb(23,32,54)] bg-opacity-60 text-white "
+                          } flex items-center w-full px-2 py-2 text-sm`}
+                        >
+                          Contact Us
                         </button>
                       </Link>
                     )}

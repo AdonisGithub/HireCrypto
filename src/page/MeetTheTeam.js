@@ -74,7 +74,7 @@ const MeetTheTeam = () => {
           </div>
         </div>
         <div className="w-full text-center px-[45px] md:px-[96px] font-sans text-white text-[20px] 2xl:text-[25px] pb-24 ">
-          Meet the founders of HireCrypto! Jesse Nortman, Ryan Brutschin, and Jeffrey Nortman are leaders within the career fair industry and have experience running the #1 virtual career fair company in technology --- HireTalent & HiredVirtual. We organize and manage premium career fairs across the country each year connecting employers with alumni who are looking for new jobs and career opportunities. We are looking to take our experience and clients over to web3 to build the recruiting platform of tomorrow!
+          Meet the founders of HireCrypto! Jesse Nortman, Jeffrey Nortman, and Ryan Brutschin are leaders within the career fair industry and have experience running the #1 virtual career fair company in technology --- HireTalent & HiredVirtual. We organize and manage premium career fairs across the country each year connecting employers with alumni who are looking for new jobs and career opportunities. We are looking to take our experience and clients over to web3 to build the recruiting platform of tomorrow!
         </div>
       </div>
     </div>
