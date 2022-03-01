@@ -32,7 +32,7 @@ const ContactUs = () => {
         walletaddress: walletaddress
         
       };
-      axios.post(API_URL + "/report",data )
+      axios.post(API_URL + "api/report",data )
       .then(res => { 
         console.log(res.data);
         SuccessAlert(res.data);

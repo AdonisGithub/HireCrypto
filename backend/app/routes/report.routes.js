@@ -2,6 +2,6 @@ const controller = require("../controllers/report.controller");
 
 module.exports = function(app) {
 
-   app.post("/report", controller.report);
+   app.post("/api/report", controller.report);
  
 };
