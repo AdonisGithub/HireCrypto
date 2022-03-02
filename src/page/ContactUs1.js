@@ -46,7 +46,7 @@ const ContactUs1 = () => {
   };
 
   return (
-    <div className="flex justify-center items-center bg-[#182037] w-full h-screen">
+    <div className="flex justify-center items-center bg-[#182037] pt-[79px] lg:pt-[100px] w-full h-screen">
       <div className="w-full  pb-11" >
         <div className="w-full text-center font-bold font-sans text-white text-[38px]  pb-2">
           Contact Us
@@ -87,7 +87,7 @@ const ContactUs1 = () => {
               <input
                 className="py-3 px-2 mb-2 text-white lg:text-black border  lg:border-black rounded-lg lg:rounded-none bg-transparent lg:bg-white hover:border-blue-700"
                 style={{ width: "-webkit-fill-available" }}
-                type="email"
+                type="text"
                 name="email"
                 placeholder="Email*"
                 value={email}

@@ -17,19 +17,15 @@ const Roadmap = ({ scroll }) => {
   useEffect(() => {
     if (phase1Ref.current) {
       let domHeight = phase1Ref.current.getBoundingClientRect().y;
-      if( domHeight < 420 && domHeight > 310 ) {
+      if( domHeight < 550 && domHeight > 450 ) {
           setPhase1Style({
           opacity: 0.2
         });
-      } else if ( domHeight < 310 && domHeight > 200 ) {
-          setPhase1Style({
-          opacity: 0.7,
-        });
-      } else if ( domHeight < 150) {
+      } else if ( domHeight < 450) {
           setPhase1Style({
           opacity: 1,
         });
-      } else if ( domHeight >450 ) {
+      } else if ( domHeight >550 ) {
           setPhase1Style({
           opacity: 0,
         });
@@ -38,19 +34,15 @@ const Roadmap = ({ scroll }) => {
 
     if (phase2Ref.current) {
       let domHeight = phase2Ref.current.getBoundingClientRect().y;
-      if( domHeight < 420 && domHeight > 310 ) {
+      if( domHeight < 550 && domHeight > 450 ) {
           setPhase2Style({
           opacity: 0.2
         });
-      } else if ( domHeight < 310 && domHeight > 200 ) {
-          setPhase2Style({
-          opacity: 0.7,
-        });
-      } else if ( domHeight < 150) {
+      } else if ( domHeight < 450) {
           setPhase2Style({
           opacity: 1,
         });
-      } else if ( domHeight >450 ) {
+      } else if ( domHeight >550 ) {
           setPhase2Style({
           opacity: 0,
         });
@@ -59,19 +51,15 @@ const Roadmap = ({ scroll }) => {
 
     if (phase3Ref.current) {
       let domHeight = phase3Ref.current.getBoundingClientRect().y;
-      if( domHeight < 420 && domHeight > 310 ) {
+      if( domHeight < 550 && domHeight > 450 ) {
           setPhase3Style({
           opacity: 0.2
         });
-      } else if ( domHeight < 310 && domHeight > 200 ) {
-          setPhase3Style({
-          opacity: 0.7,
-        });
-      } else if ( domHeight < 150) {
+      } else if ( domHeight < 450) {
           setPhase3Style({
           opacity: 1,
         });
-      } else if ( domHeight >450 ) {
+      } else if ( domHeight >550 ) {
           setPhase3Style({
           opacity: 0,
         });
@@ -79,19 +67,15 @@ const Roadmap = ({ scroll }) => {
     }
     if (phase4Ref.current) {
       let domHeight = phase4Ref.current.getBoundingClientRect().y;
-      if( domHeight < 420 && domHeight > 310 ) {
+      if( domHeight < 550 && domHeight > 450 ) {
           setPhase4Style({
           opacity: 0.2
         });
-      } else if ( domHeight < 310 && domHeight > 200 ) {
-          setPhase4Style({
-          opacity: 0.9,
-        });
-      } else if ( domHeight < 150) {
+      } else if ( domHeight < 450) {
           setPhase4Style({
           opacity: 1,
         });
-      } else if ( domHeight >450 ) {
+      } else if ( domHeight >550 ) {
           setPhase4Style({
           opacity: 0,
         });
@@ -102,7 +86,7 @@ const Roadmap = ({ scroll }) => {
   return (
     <div>
       <div className="w-full relative bg-[#182037]" id="Roadmap">
-        <div className="w-full text-center font-bold font-sans text-white text-[38px] 2xl:text-[45px] pt-[85px] pb-2" >
+        <div className="w-full text-center font-bold font-sans text-white text-[38px] 2xl:text-[45px] pt-[105px] pb-2" >
           Roadmap
         </div>
         <div className="hidden md:flex w-full min-h-full justify-center absolute top-[150px] ">
@@ -110,17 +94,17 @@ const Roadmap = ({ scroll }) => {
         </div>
         <div className="w-full flex justify-center md:justify-start" ref={phase1Ref} style={phase1Style}>
             <div className="md:w-1/2 flex mb-5 mt-8 ">
-              <div className="font-bold font-sans text-white  text-[28px]  md:ml-[15%] xl:ml-[20%] pr-3 whitespace-nowrap">
+              <div className="font-bold font-sans text-white  text-[28px]  md:ml-[15%] xl:ml-[20%] 2xl:ml-[35%] pr-3 whitespace-nowrap">
                 PHASE 1
               </div>
-              <div className="w-[210px] sm:w-[310px] border-l-2 border-white pl-3  mb-3 mr-[55px]">
-                <div className="font-sans text-white text-[16px]">
+              <div className="w-[210px] sm:w-[310px] 2xl:w-[370px] border-l-2 border-white pl-3  mb-3 mr-[10px] md:mr-[55px]">
+                <div className="font-sans text-white text-[16px] 2xl:text-[25px]">
                   -Discord Launch 
                 </div>
-                <div className="font-sans text-white text-[16px]">
+                <div className="font-sans text-white text-[16px] 2xl:text-[25px]">
                   -Website Launch 
                 </div>
-                <div className="font-sans text-white text-[16px]">
+                <div className="font-sans text-white text-[16px] 2xl:text-[25px]">
                   -First employer hiring event
                 </div>
               </div>
@@ -131,14 +115,14 @@ const Roadmap = ({ scroll }) => {
               <div className="font-bold font-sans text-white text-[28px] md:ml-[15%] xl:ml-[20%] pr-3 whitespace-nowrap">
                 PHASE 2
               </div>
-              <div className="w-[210px] sm:w-[310px] border-l-2 border-white pl-3  mb-3 mr-[55px]">
-                <div className="font-sans text-white text-[16px]">
+              <div className="w-[210px] sm:w-[310px] 2xl:w-[370px] border-l-2 border-white pl-3  mb-3 mr-[10px] md:mr-[55px]">
+                <div className="font-sans text-white text-[16px] 2xl:text-[25px]">
                   -Multiple crypto Hiring Events every week
                 </div>
-                <div className="font-sans text-white text-[16px]">
+                <div className="font-sans text-white text-[16px] 2xl:text-[25px]">
                   -Reach 100+ weekly interviews in discord
                 </div>
-                <div className="font-sans text-white text-[16px]">
+                <div className="font-sans text-white text-[16px] 2xl:text-[25px]">
                  -Develop limited NFT collection 
                 </div>
               </div>
@@ -146,20 +130,20 @@ const Roadmap = ({ scroll }) => {
         </div>
         <div className="w-full flex justify-center md:justify-start " ref={phase3Ref} style={phase3Style}>
             <div className=" md:w-1/2 flex mb-5 mt-[85px] ">
-              <div className="font-bold font-sans text-white text-[28px]  md:ml-[15%] xl:ml-[20%] pr-3 whitespace-nowrap">
+              <div className="font-bold font-sans text-white text-[28px]  md:ml-[15%] xl:ml-[20%] 2xl:ml-[35%] pr-3 whitespace-nowrap">
                 PHASE 3
               </div>
-              <div className="w-[210px] sm:w-[310px] border-l-2 border-white pl-3  mb-3 mr-[55px]">
-                <div className="font-sans text-white text-[16px]">
+              <div className="w-[210px] sm:w-[310px] 2xl:w-[370px] border-l-2 border-white pl-3  mb-3 mr-[10px] md:mr-[55px]">
+                <div className="font-sans text-white text-[16px] 2xl:text-[25px]">
                 -Launch limited NFT collection
                 </div>
-                <div className="font-sans text-white text-[16px]">
+                <div className="font-sans text-white text-[16px] 2xl:text-[25px]">
                 -IRL Events
                 </div>
-                <div className="font-sans text-white text-[16px]">
+                <div className="font-sans text-white text-[16px] 2xl:text-[25px]">
                   -Launch HireCrypto job board on the blockchain
                 </div>
-                <div className="font-sans text-white text-[16px]">
+                <div className="font-sans text-white text-[16px] 2xl:text-[25px]">
                   -Connect your wallet to HireCrypto.com to be eligible for a FREE NFT airdrop 
                 </div>
               </div>
@@ -170,20 +154,20 @@ const Roadmap = ({ scroll }) => {
               <div className="font-bold font-sans text-white text-[28px] md:ml-[15%] xl:ml-[20%] pr-3 whitespace-nowrap">
                 PHASE 4
               </div>
-              <div className="w-[210px] sm:w-[310px] border-l-2 border-white pl-3  mb-3 mr-[55px]">
-                <div className="font-sans text-white text-[16px]">
+              <div className="w-[210px] sm:w-[310px] 2xl:w-[370px] border-l-2 border-white pl-3  mb-3 mr-[10px] md:mr-[55px]">
+                <div className="font-sans text-white text-[16px] 2xl:text-[25px]">
                 -Become the #1 community for hiring talent in crypto
                 </div>
-                <div className="font-sans text-white text-[16px]">
+                <div className="font-sans text-white text-[16px] 2xl:text-[25px]">
                 -Reach 100k discord members
                 </div>
-                <div className="font-sans text-white text-[16px]">
+                <div className="font-sans text-white text-[16px] 2xl:text-[25px]">
                 -Launch Crypto Token 
                 </div>
-                <div className="font-sans text-white text-[16px]">
+                <div className="font-sans text-white text-[16px] 2xl:text-[25px]">
                 -NFT Staking
                 </div>
-                <div className="font-sans text-white text-[16px]">
+                <div className="font-sans text-white text-[16px] 2xl:text-[25px]">
                 -Airdrop FREE NFT with evolving metadata 
                 </div>
               </div>

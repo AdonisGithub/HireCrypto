@@ -8,7 +8,7 @@ const MeetTheTeam = () => {
   return (
     <div>
       <div className=" w-full bg-[#385d94]" id="MeetTheTeam">
-        <div className="w-full text-center font-bold font-sans text-white text-[38px] 2xl:text-[45px] pt-[85px] pb-4">
+        <div className="w-full text-center font-bold font-sans text-white text-[38px] 2xl:text-[45px] pt-[105px] pb-4">
           Meet the Team
         </div>
         <div className="w-full grid lg:grid-cols-3 mb-4">
