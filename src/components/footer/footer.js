@@ -1,6 +1,5 @@
 import React  from "react";
 import logo from "../../assets/images/logo.png";
-import { Link} from 'react-scroll'
 const Footer = () => {
   return (
     <div className="bg-[#182037] px-[45px] md:px-[96px]">
@@ -22,7 +21,7 @@ const Footer = () => {
             Email
           </a>
           <a
-            href="/ContactUs"
+            href="/contactus"
             className="flex shrink-0 items-center  text-gray-400 hover:text-green-600 mb-1 md:mb-2"
           >
             Contact Form
@@ -42,11 +41,13 @@ const Footer = () => {
           <div className="text-base text-white font-bold font-sans mb-5">
             Socials
           </div>
-          <Link activeClass="active" to="Discord" spy={true} smooth={true} offset={0} duration={500} delay={300}
-            className="flex shrink-0 items-center cursor-pointer  text-gray-400 hover:text-green-600 mb-2 "
+          <a
+            href="https://discord.gg/hirecrypto"
+            className="flex shrink-0 items-center  text-gray-400 hover:text-green-600 mb-2"
+            target="_blank" rel="noreferrer"
           >
-            Discord
-          </Link>
+            Discord            
+          </a>
           <a
             href="https://twitter.com/Hire_Crypto"
             className="flex shrink-0 items-center  text-gray-400 hover:text-green-600 mb-2"
