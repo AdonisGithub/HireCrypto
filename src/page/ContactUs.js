@@ -32,7 +32,7 @@ const ContactUs = () => {
         walletaddress: walletaddress
         
       };
-      axios.post(API_URL + "api/report",data )
+      axios.post(API_URL + "/api/report",data )
       .then(res => { 
         console.log(res.data);
         SuccessAlert(res.data);
@@ -57,7 +57,7 @@ const ContactUs = () => {
         <div className="w-full justify-center px-[45px] md:px-[96px]">
           <div className="grid grid-cols-2 gap-5">
             <div className=" mt-4">
-              <h1 className="text-white font-bold  mb-1"> First Name* </h1>
+              <h1 className="text-white font-bold  mb-1"> First Name </h1>
               <input
                 className="py-3 px-2 mb-2 text-white lg:text-black border  lg:border-black rounded-lg lg:rounded-none bg-transparent lg:bg-white hover:border-blue-700"
                 style={{ width: "-webkit-fill-available" }}
@@ -69,7 +69,7 @@ const ContactUs = () => {
               />
             </div>
             <div className=" mt-4">
-              <h1 className="text-white font-bold mb-1"> Last Name* </h1>
+              <h1 className="text-white font-bold mb-1"> Last Name </h1>
               <input
                 className="py-3 px-2 mb-2 text-white lg:text-black border  lg:border-black rounded-lg lg:rounded-none bg-transparent lg:bg-white hover:border-blue-700"
                 style={{ width: "-webkit-fill-available" }}
@@ -83,7 +83,7 @@ const ContactUs = () => {
           </div>
           <div className="grid grid-cols-2 gap-5">
             <div className=" mt-4">
-              <h1 className="text-white font-bold  mb-1"> Email* </h1>
+              <h1 className="text-white font-bold  mb-1"> Email </h1>
               <input
                 className="py-3 px-2 mb-2 text-white lg:text-black border  lg:border-black rounded-lg lg:rounded-none bg-transparent lg:bg-white hover:border-blue-700"
                 style={{ width: "-webkit-fill-available" }}
@@ -95,7 +95,7 @@ const ContactUs = () => {
               />
             </div>
             <div className=" mt-4">
-              <h1 className="text-white font-bold mb-1"> Phone Number* </h1>
+              <h1 className="text-white font-bold mb-1"> Phone Number </h1>
               <input
                 className="py-3 px-2 mb-2 text-white lg:text-black border  lg:border-black rounded-lg lg:rounded-none bg-transparent lg:bg-white hover:border-blue-700"
                 style={{ width: "-webkit-fill-available" }}
@@ -108,7 +108,7 @@ const ContactUs = () => {
             </div>
           </div>
           <div className="w-full justify-center mt-4">
-            <h1 className="text-white font-bold mb-1"> Message* </h1>
+            <h1 className="text-white font-bold mb-1"> Message </h1>
             <textarea
               className="py-3 px-2 mb-2 text-white lg:text-black border  lg:border-black rounded-lg lg:rounded-none bg-transparent lg:bg-white hover:border-blue-700"
               style={{ width: "inherit" }}
