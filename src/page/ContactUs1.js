@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import validator from 'validator';
 import axios from "axios";
-import {useSelector } from "react-redux";
+//import {useSelector } from "react-redux";
 
 import { ErrorAlert, SuccessAlert } from "../components/common/ToastAlert";
 //const API_URL = "http://localhost:8080";
@@ -16,8 +16,8 @@ const ContactUs1 = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [message, setMessage] = useState("");
 
-  const walletaddress = useSelector((state) => state.savewalletaddress.walletaddress); //store data
-  console.log("ContactUs:", walletaddress);
+  //const walletaddress = useSelector((state) => state.savewalletaddress.walletaddress); //store data
+  //console.log("ContactUs:", walletaddress);
 
   const submit = (e) => {
     e.preventDefault();
@@ -29,7 +29,7 @@ const ContactUs1 = () => {
         email: email,
         phoneNumber: phoneNumber,
         message: message,
-        walletaddress: walletaddress
+        //walletaddress: walletaddress
         
       };
       axios.post(API_URL + "/api/contact",data )
