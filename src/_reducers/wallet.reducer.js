@@ -3,7 +3,7 @@ const initialstate = {
      walletaddress: ""
 }
 
-export function walletaddress(state =initialstate , action) {
+export function savewalletaddress(state =initialstate , action) {
     switch (action.type) {
           case reportConstants.WALLETADDRESSGET_SUCCESS:
                return {

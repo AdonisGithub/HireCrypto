@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import { walletaddress } from './report.reducer';
+import { savewalletaddress } from './wallet.reducer';
 
 const rootReducer = combineReducers({
-    walletaddress,
+    savewalletaddress,
 });
 
 export default rootReducer;

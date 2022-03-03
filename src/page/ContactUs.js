@@ -16,7 +16,7 @@ const ContactUs = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [message, setMessage] = useState("");
 
-  const walletaddress = useSelector((state) => state.walletaddress.walletaddress); //store data
+  const walletaddress = useSelector((state) => state.savewalletaddress.walletaddress); //store data
   console.log("ContactUs:", walletaddress);
 
   const submit = (e) => {
@@ -32,7 +32,7 @@ const ContactUs = () => {
         walletaddress: walletaddress
         
       };
-      axios.post(API_URL + "/api/report",data )
+      axios.post(API_URL + "/api/contact",data )
       .then(res => { 
         console.log(res.data);
         SuccessAlert(res.data);

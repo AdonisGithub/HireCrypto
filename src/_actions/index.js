@@ -1,1 +1,1 @@
-export * from './report.actions';
+export * from './wallet.actions';

@@ -16,7 +16,7 @@ const ContactUs1 = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [message, setMessage] = useState("");
 
-  const walletaddress = useSelector((state) => state.walletaddress.walletaddress); //store data
+  const walletaddress = useSelector((state) => state.savewalletaddress.walletaddress); //store data
   console.log("ContactUs:", walletaddress);
 
   const submit = (e) => {
@@ -32,7 +32,7 @@ const ContactUs1 = () => {
         walletaddress: walletaddress
         
       };
-      axios.post(API_URL + "/api/report",data )
+      axios.post(API_URL + "/api/contact",data )
       .then(res => { 
         console.log(res.data);
         SuccessAlert(res.data);
@@ -46,7 +46,7 @@ const ContactUs1 = () => {
   };
 
   return (
-    <div className="flex justify-center items-center bg-[#182037] pt-[79px] lg:pt-[100px] w-full h-screen">
+    <div className="flex justify-center items-center bg-[#182037] w-full h-screen">
       <div className="w-full  pb-11" >
         <div className="w-full text-center font-bold font-sans text-white text-[38px]  pb-2">
           Contact Us

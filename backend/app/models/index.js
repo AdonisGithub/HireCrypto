@@ -5,6 +5,7 @@ const db = {};
 
 db.mongoose = mongoose;
 
-db.report = require("./report.model");
+//db.report = require("./report.model");
+db.wallet = require("./wallet.model");
 
 module.exports = db;

@@ -1,1 +1,1 @@
-export * from './report.constant';
+export * from './wallet.constant';

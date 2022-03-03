@@ -2,8 +2,9 @@ import { useState } from "react";
 import {connectWallet} from "../../utils/interacts";
 import { StoreWalletAddress } from "../../_actions";
 import { useDispatch} from "react-redux";
-
-
+import axios from "axios";
+//const API_URL = "http://localhost:8080";
+const API_URL = "https://hirecrypto.com";
 
 const Minter = (props) => {
 
@@ -24,8 +25,16 @@ const Minter = (props) => {
       const walletResponse = await connectWallet();
       //setStatus(walletResponse.status);
       setWallet(walletResponse.address);
+      console.log("Minter-",walletResponse.address);
 
 		  dispatch(StoreWalletAddress(walletResponse.address));
+      axios.post(API_URL + "/api/walletaddress", {walletaddress: walletResponse.address} )
+      .then(res => { 
+        console.log(res.data);
+      })
+      .catch(err =>{ 
+        console.log(err.response.data); 
+      });
       
   };
   // const onMintPressed = async () => { //TODO: implement
