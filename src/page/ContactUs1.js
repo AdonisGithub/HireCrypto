@@ -39,6 +39,7 @@ const ContactUs1 = () => {
       })
       .catch(err =>{ 
         console.log(err.response.data); 
+        ErrorAlert(err.response.data);
       });
     }
     else 
@@ -57,25 +58,25 @@ const ContactUs1 = () => {
         <div className="w-full justify-center px-[45px] md:px-[96px]">
           <div className="grid grid-cols-2 gap-5">
             <div className=" mt-4">
-              <h1 className="text-white font-bold  mb-1"> First Name </h1>
+              <h1 className="text-white font-bold  mb-1"> First Name* </h1>
               <input
                 className="py-3 px-2 mb-2 text-white lg:text-black border  lg:border-black rounded-lg lg:rounded-none bg-transparent lg:bg-white hover:border-blue-700"
                 style={{ width: "-webkit-fill-available" }}
                 type="text"
                 name="firstname"
-                placeholder="First Name*"
+                placeholder="First Name"
                 value={firstName}
                 onChange={(e)=>setFirstName(e.target.value)}
               />
             </div>
             <div className=" mt-4">
-              <h1 className="text-white font-bold mb-1"> Last Name </h1>
+              <h1 className="text-white font-bold mb-1"> Last Name* </h1>
               <input
                 className="py-3 px-2 mb-2 text-white lg:text-black border  lg:border-black rounded-lg lg:rounded-none bg-transparent lg:bg-white hover:border-blue-700"
                 style={{ width: "-webkit-fill-available" }}
                 type="text"
                 name="lastname"
-                placeholder="Last Name*"
+                placeholder="Last Name"
                 value={lastName}
                 onChange={(e)=>setLastName(e.target.value)}
               />
@@ -83,25 +84,25 @@ const ContactUs1 = () => {
           </div>
           <div className="grid grid-cols-2 gap-5">
             <div className=" mt-4">
-              <h1 className="text-white font-bold  mb-1"> Email </h1>
+              <h1 className="text-white font-bold  mb-1"> Email* </h1>
               <input
                 className="py-3 px-2 mb-2 text-white lg:text-black border  lg:border-black rounded-lg lg:rounded-none bg-transparent lg:bg-white hover:border-blue-700"
                 style={{ width: "-webkit-fill-available" }}
                 type="text"
                 name="email"
-                placeholder="Email*"
+                placeholder="Email"
                 value={email}
                 onChange={(e)=>setEmail(e.target.value)}
               />
             </div>
             <div className=" mt-4">
-              <h1 className="text-white font-bold mb-1"> Phone Number </h1>
+              <h1 className="text-white font-bold mb-1"> Phone Number* </h1>
               <input
                 className="py-3 px-2 mb-2 text-white lg:text-black border  lg:border-black rounded-lg lg:rounded-none bg-transparent lg:bg-white hover:border-blue-700"
                 style={{ width: "-webkit-fill-available" }}
                 type="text"
                 name="phoneNumber"
-                placeholder="Phone Number*"
+                placeholder="Phone Number"
                 value={phoneNumber}
                 onChange={(e)=>setPhoneNumber(e.target.value)}
               />
