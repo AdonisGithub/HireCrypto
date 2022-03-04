@@ -15,7 +15,7 @@ const Footer = () => {
             Phone
           </a>
           <a
-            href="mailto:ryan@hirecrypto.com"
+            href="mailto:hirecryptoteam@gmail.com"
             className="flex shrink-0 items-center  text-gray-400 hover:text-green-600 mb-2"
           >
             Email
